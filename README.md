@@ -13,7 +13,7 @@ DiagnoMind is a full-stack medical diagnosis system built with **Laravel + Livew
 
 ### 1. Download or Clone the Project
 
-Extract or clone the project folder:
+Extract or clone the project folders into a file structure as follows:
 
 ```
 
@@ -22,6 +22,9 @@ diagnomind-projects/
 └── diagnomind.localhost/ # Laravel web frontend
 
 ```
+
+- Please note that diagnomind-ai-server repository can be found at https://github.com/Cletous/diagnomind-ai-server
+- Please note that diagnomind.localhost repository can be found at https://github.com/Cletous/diagnomind.localhost
 
 ---
 
@@ -32,7 +35,7 @@ cd diagnomind-projects/diagnomind-ai-server
 python app.py
 ```
 
-This runs the Flask server at: `http://127.0.0.1:8000/predict`
+This runs the Flask server at: `http://127.0.0.1:2500/predict`
 
 ---
 
@@ -43,7 +46,7 @@ cd ../diagnomind.localhost
 cp .env.example .env
 ```
 
-Edit `.env` and configure your database:
+Edit `.env` and configure your database for example:
 
 ```dotenv
 DB_CONNECTION=mysql
@@ -83,7 +86,24 @@ php artisan migrate:fresh --seed
 
 ---
 
-### 7. Start Laravel Development Server
+### 7. Link and configure your mail provider:
+
+```dotenv
+MAIL_MAILER=smtp
+MAIL_HOST=server1.makuruwan.com
+MAIL_PORT=465
+MAIL_USERNAME=no-reply@yourdomain.com
+MAIL_PASSWORD=EmailPassword
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS="no-reply@yourdomain.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+Replace `MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_ENCRYPTION` and `MAIL_FROM_ADDRESS` with your actual mail provider configuration settings and credentials.
+
+---
+
+### 8. Start Laravel Development Server
 
 ```bash
 php artisan serve
