@@ -1,0 +1,3 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+local_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
