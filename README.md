@@ -45,6 +45,8 @@ This runs the Flask server at: `http://127.0.0.1:2500/predict`
 
 ### 3. Configure Laravel Environment
 
+Open a new terminal window from inside inside the `diagnomind-ai-server` folder and run the following commands
+
 ```bash
 cd ../diagnomind.localhost
 cp .env.example .env
