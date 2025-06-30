@@ -13,7 +13,7 @@ DiagnoMind is a full-stack medical diagnosis system built with **Laravel + Livew
 
 ### 1. Create a folder diagnomind-projects and clone the github repositories in there
 
-Use the following commands:
+Right click on the desktop and Open Terminal. Then use the following commands:
 
 ```
 mkdir diagnomind-projects
