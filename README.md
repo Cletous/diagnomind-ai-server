@@ -11,9 +11,16 @@ DiagnoMind is a full-stack medical diagnosis system built with **Laravel + Livew
 
 ## Getting Started (Development Setup)
 
-### 1. Create a folder diagnomind-projects
+### 1. Create a folder diagnomind-projects and clone the github repositories in there
 
-You are going to need to Extract or clone the project folders into a file structure as follows:
+```
+mkdir diagnomind-projects
+cd diagnomind-projects/
+git clone https://github.com/Cletous/diagnomind-ai-server
+git clone https://github.com/Cletous/diagnomind.localhost
+```
+
+You should end up with a folder structure as follows:
 
 ```
 
@@ -23,15 +30,12 @@ diagnomind-projects/
 
 ```
 
-- To Clone Python Flask AI engine use: `git clone https://github.com/Cletous/diagnomind-ai-server`
-- To Clone Laravel web frontend use: `git clone https://github.com/Cletous/diagnomind.localhost`
-
 ---
 
 ### 2. Start the AI Diagnosis Server
 
 ```bash
-cd diagnomind-projects/diagnomind-ai-server
+cd /diagnomind-ai-server
 python app.py
 ```
 
@@ -46,15 +50,75 @@ cd ../diagnomind.localhost
 cp .env.example .env
 ```
 
-Edit `.env` and configure your database for example:
+Copy and paste the following into your created `.env`:
 
 ```dotenv
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=diagnomind
-DB_USERNAME=root
-DB_PASSWORD=
+APP_NAME="DiagnoMind AI"
+APP_ENV=local
+APP_KEY=base64:mbGmIxq9dtVsuQJ9sSCeZp96z2sqAjkGrBaLfOoFlXg=
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000/
+
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
+
+APP_MAINTENANCE_DRIVER=file
+# APP_MAINTENANCE_STORE=database
+
+PHP_CLI_SERVER_WORKERS=4
+
+BCRYPT_ROUNDS=12
+
+LOG_CHANNEL=stack
+LOG_STACK=single
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
+
+DB_CONNECTION=sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=laravel
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+SESSION_DRIVER=database
+SESSION_LIFETIME=120
+SESSION_ENCRYPT=false
+SESSION_PATH=/
+SESSION_DOMAIN=null
+
+BROADCAST_CONNECTION=log
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=database
+
+CACHE_STORE=database
+# CACHE_PREFIX=
+
+MEMCACHED_HOST=127.0.0.1
+
+REDIS_CLIENT=phpredis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=log
+MAIL_SCHEME=null
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+VITE_APP_NAME="${APP_NAME}"
+
 ```
 
 ---
