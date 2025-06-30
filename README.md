@@ -37,7 +37,7 @@ diagnomind-projects/
 ### 2. Start the AI Diagnosis Server
 
 ```bash
-cd /diagnomind-ai-server
+cd diagnomind-ai-server
 python app.py
 ```
 
@@ -145,12 +145,12 @@ php artisan migrate:fresh --seed
 
 ### 6. Default User Accounts
 
-| Role         | Email                                | Password  |
-| ------------ | ------------------------------------ | --------- |
-| **Admin**    | `admin@test.com`                     | `admin`   |
-| **Doctors**  | `doctor1@test.com`                   | `doctor`  |
-|              | `doctor2@gmail.com`                  | `doctor`  |
-| **Patients** | `user1@test.com` → `user20@test.com` | `patient` |
+| Role         | Email                                | Password  | Natioanal Id Number             |
+| ------------ | ------------------------------------ | --------- | ------------------------------- |
+| **Admin**    | `admin@test.com`                     | `admin`   | `111111111T01`                  |
+| **Doctors**  | `doctor1@test.com`                   | `doctor`  | `111111111T02`                  |
+|              | `doctor2@gmail.com`                  | `doctor`  | `111111111T03`                  |
+| **Patients** | `user1@test.com` → `user20@test.com` | `patient` | `100000001T01` → `100000001T01` |
 
 ---
 
