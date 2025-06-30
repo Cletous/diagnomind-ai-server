@@ -11,9 +11,9 @@ DiagnoMind is a full-stack medical diagnosis system built with **Laravel + Livew
 
 ## Getting Started (Development Setup)
 
-### 1. Download or Clone the Project
+### 1. Create a folder diagnomind-projects
 
-Extract or clone the project folders into a file structure as follows:
+You are going to need to Extract or clone the project folders into a file structure as follows:
 
 ```
 
@@ -23,8 +23,8 @@ diagnomind-projects/
 
 ```
 
-- Please note that diagnomind-ai-server repository can be found at https://github.com/Cletous/diagnomind-ai-server
-- Please note that diagnomind.localhost repository can be found at https://github.com/Cletous/diagnomind.localhost
+- To Clone Python Flask AI engine use: `git clone https://github.com/Cletous/diagnomind-ai-server`
+- To Clone Laravel web frontend use: `git clone https://github.com/Cletous/diagnomind.localhost`
 
 ---
 
